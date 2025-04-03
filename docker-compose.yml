@@ -1,0 +1,11 @@
+services:
+ django-web:
+   restart: always
+   build:
+    context: .
+    dockerfile: Dockerfile
+   container_name: django-colors
+   volumes:
+      - .:/app
+   ports:
+     - "8000:8000"

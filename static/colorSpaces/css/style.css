@@ -1,0 +1,60 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #5062ea;
+}
+header {
+    background: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+main {
+    padding: 20px;
+}
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    margin-bottom: 20px;
+}
+h2 {
+    margin-top: 0;
+    color: #555;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+}
+
+/* Style de la zone de drag and drop */
+#drop-area {
+    border: 2px dashed #000000;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+#drop-area.hover {
+    background-color: #f0f0f0;
+}
+#status-message {
+    margin-top: 10px;
+    color: green;
+}
+#error-message {
+    margin-top: 10px;
+    color: red;
+}
+#download-btn {
+    margin-top: 20px;
+    display: none;
+}

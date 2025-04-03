@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"  type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHROMATICITY</title>
+</head>
+<body>
+    <header>
+        <h1>CHROMATICITY</h1>
+        <p>Explorez le monde fascinant des espaces de couleurs</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Espaces de Couleurs</h2>
+            <p>L'espace de couleur est un modèle mathématique tridimensionnel basé sur l'ensemble des couleurs perceptibles, utilisable ou représentable par un appareil ou l'humain. Le premier espace de couleur connu est évidemment celui perçu par l'œil humain.</p>
+        </section>
+
+        <section>
+            <h2>Gamut</h2>
+            <p>Le gamut désigne la gamme de couleurs qu'un appareil peut capturer ou afficher. Comprendre le gamut est essentiel pour garantir la fidélité des couleurs entre différents dispositifs.</p>
+        </section>
+
+        <section>
+            <h2>Convertir une image</h2>
+            <div id="drop-area">
+                <p>Glissez et déposez une image ici ou cliquez pour sélectionner une image.</p>
+                <input type="file" id="file-input" name="image" accept="image/*" style="display:none;">
+                <button onclick="document.getElementById('file-input').click()">Choisir une image</button>
+            </div>
+            <div>
+                <label for="color-space">Choisissez un espace de couleur :</label>
+                <select id="color-space">
+                    <option value="rgb">RGB</option>
+                    <option value="hsv">HSV</option>
+                    <option value="lab">LAB</option>
+                    <option value="xyz">XYZ</option>
+                    <option value="ycbcr">YCbCr</option>
+                    <option value="gray">Grayscale</option>
+                </select>
+            </div>
+            <canvas id="canvas" style="display:none;"></canvas>
+            <button id="convert-btn" onclick="convertImage()">Convertir l'image</button>
+            <button id="download-btn" onclick="downloadImage()">Télécharger l'image convertie</button>
+            <p id="status-message"></p>
+            <p id="error-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CHROMATICITY. Tous droits réservés.</p>
+    </footer>
+    <script src="{% static 'js/main.js' %}" type="text/javascript"></script>
+</body>
+</html>
